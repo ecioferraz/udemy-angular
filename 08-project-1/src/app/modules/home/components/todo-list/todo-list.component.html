@@ -1,16 +1,22 @@
-<ul>
-  <li>
-    <input type="checkbox" />
-    <input type="text" />
-    <button>
-      <img alt="Trash icon" src="assets/icons/trash-icon.svg" />
-    </button>
-  </li>
-  <li>
-    <input type="checkbox" />
-    <input type="text" class="checked" />
-    <button>
-      <img alt="Trash icon" src="assets/icons/trash-icon.svg" />
-    </button>
-  </li>
-</ul>
+<section [ngClass]="{'empty': !taskList.length}">
+  <ul *ngIf="taskList.length">
+    <li *ngFor="let item of taskList; index as i">
+      <input type="checkbox" [(ngModel)]="item.checked" />
+      <input
+        (keyup)="checkEmptyTask(item.task, i)"
+        [ngClass]="{'checked': item.checked}"
+        [(ngModel)]="item.task"
+        type="text"
+      />
+      <button (click)="deleteTask(i)">
+        <img alt="Trash icon" src="assets/icons/trash-icon.svg" />
+      </button>
+    </li>
+  </ul>
+</section>
+<app-text-input (emitTask)="setEmitTask($event)"></app-text-input>
+<app-delete-all-button
+  *ngIf="taskList.length"
+  (click)="deleteAllTasks()"
+></app-delete-all-button>
+

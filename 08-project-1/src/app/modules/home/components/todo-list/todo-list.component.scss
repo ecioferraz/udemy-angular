@@ -1,58 +1,64 @@
 @import '../../../../../dist/scss/variables.scss';
 
-:host {
-  list-style: none;
-  background: $secondary-background-color;
-  border-radius: 4px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
-  margin-top: $size-small;
-  padding: $size-small;
-}
-
-li {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-
-  > * {
-    margin: 0 5px;
+// :host {
+  section {
+    list-style: none;
+    background: $secondary-background-color;
+    border-radius: 4px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    margin-top: $size-small;
+    padding: $size-small 0;
   }
 
-  input {
-    &[type='checkbox'] {
-      width: 5%;
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    > * {
+      margin: 0 5px;
     }
 
-    &[type='text'] {
-      border: none;
-      color: $primary-text-color;
-      padding: $size-x-small $size-small;
-      width: 80%;
+    input {
+      &[type='checkbox'] {
+        width: 5%;
+      }
 
-      &.checked {
-        text-decoration: line-through;
+      &[type='text'] {
+        border: none;
+        color: $primary-text-color;
+        padding: $size-x-small $size-small;
+        width: 80%;
+
+        &.checked {
+          text-decoration: line-through;
+        }
       }
     }
+
+    input:focus {
+      outline: none;
+    }
   }
 
-  input:focus {
-    outline: none;
+  .empty {
+    background: url('../../../../../assets//img/bg-task.png') $secondary-background-color no-repeat center 30px;
+    min-height: 20rem;
   }
-}
 
+  button {
+    background: none;
+    border: none;
+    width: 5%;
+  }
 
-.loading {
-  background: url('../../../../../assets/img/bg-task.png') no-repeat center 30px;
-}
+  button:hover {
+    border-radius: 2px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
 
-button {
-  background: none;
-  border: none;
-  width: 5%;
-}
-
-button:active {
-  border-radius: 2px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0);
-  transition: 0s;
-}
+  button:active {
+    background: $primary-background-color;
+    transition: 0s;
+  }
+// }
