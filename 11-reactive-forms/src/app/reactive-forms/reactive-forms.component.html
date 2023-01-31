@@ -1,0 +1,51 @@
+<form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+  <label>
+    Name:
+    <input formControlName="firstName" />
+    <span
+      *ngIf="
+        registerForm.get('firstName')?.errors
+        && (
+          registerForm.get('firstName')?.touched
+          && registerForm.get('firstName')?.dirty
+        )"
+    >
+      Name is required.
+    </span>
+  </label>
+  <br />
+  <br />
+  <label>
+    Last name:
+    <input formControlName="lastName" maxlength="15" />
+    <span
+      *ngIf="
+        registerForm.get('lastName')?.errors
+        && (
+          registerForm.get('lastName')?.touched
+          && registerForm.get('lastName')?.dirty
+        )"
+    >
+      Last name must be at least {{ registerForm.get('lastName')?.errors?.['minlength']?.['requiredLength'] }} characters long.
+    </span>
+  </label>
+  <br />
+  <br />
+  <label>
+    Email:
+    <input formControlName="email" type="email" />
+    <span
+      *ngIf="
+        registerForm.get('email')?.errors
+        && (
+          registerForm.get('email')?.touched
+          && registerForm.get('email')?.dirty
+        )"
+    >
+      Email invalid.
+    </span>
+  </label>
+  <br />
+  <br />
+  <button [disabled]="registerForm.invalid">Submit</button>
+</form>
