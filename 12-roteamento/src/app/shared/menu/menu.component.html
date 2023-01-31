@@ -1,0 +1,33 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a
+          routerLink="/"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="about"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          About
+        </a>
+      </li>
+      <li>
+        <a
+          [routerLink]="['not-found']"
+          [routerLinkActive]="['active']"
+          [routerLinkActiveOptions]="{exact: true}"
+        >
+          Page Not Found
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
