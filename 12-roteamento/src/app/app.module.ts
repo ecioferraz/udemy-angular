@@ -9,7 +9,13 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, AboutComponent, NotFoundComponent, MenuComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AboutComponent,
+    NotFoundComponent,
+    MenuComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
