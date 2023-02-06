@@ -2,8 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: 0.8s;
-  vertical-align: baseline;
+  transition: 0.8s all ease-in-out;
 }
 
 html {
@@ -12,9 +11,6 @@ html {
 }
 
 body {
-  align-items: center;
-  display: flex;
-  font-size: 1.6rem;
+  font-size: 0.9rem;
   font-weight: 400;
-  justify-content: center;
 }

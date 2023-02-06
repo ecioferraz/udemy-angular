@@ -1,0 +1,74 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  > section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    justify-content: space-between;
+
+    a:hover {
+      scale: 1.03;
+    }
+
+    a {
+      background: var(--white);
+      border-radius: 1rem;
+      color: var(--primary-color);
+      display: flex;
+      height: 20rem;
+      justify-content: space-between;
+      min-width: 49%;
+      overflow: hidden;
+      padding: 2rem;
+      position: relative;
+      text-decoration: none;
+
+      section:has(h2, ul) {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: left;
+
+        h2 {
+          font-size: 2.2rem;
+          font-style: italic;
+          font-weight: 700;
+        }
+
+        li {
+          align-items: center;
+          border-radius: 10rem;
+          background: var(--grey);
+          display: flex;
+          font-size: 1rem;
+          height: 1.6rem;
+          justify-content: center;
+          list-style: none;
+          margin: 0.5rem 0;
+          width: 5.5rem;
+          text-align: center;
+        }
+      }
+
+      section:has(img) {
+        align-items: center;
+        background: url('../../../assets/svg/pkm-bg.svg');
+        display: flex;
+        height: 9rem;
+        inset: auto 2rem 2rem auto;
+        justify-content: center;
+        position: absolute;
+        width: 11rem;
+
+        img {
+          width: 6rem;
+        }
+      }
+    }
+  }
+}

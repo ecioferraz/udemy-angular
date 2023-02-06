@@ -1,7 +1,4 @@
 <form>
-  <input placeholder="Search Pokémon..." />
-  <img
-    alt="Magnifying glass"
-    src="../../../assets/images/magnifying-glass.svg"
-  />
+  <input (keyup)="setSearch(input.value)" placeholder="Search Pokémon..." #input />
+  <img alt="Magnifying glass" src="assets/svg/magnifying-glass.svg" />
 </form>

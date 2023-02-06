@@ -1,7 +1,7 @@
 :host {
   form {
     align-items: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(var(--white-low-opacity));
     border-radius: 0.6rem;
     display: flex;
     justify-content: space-between;
