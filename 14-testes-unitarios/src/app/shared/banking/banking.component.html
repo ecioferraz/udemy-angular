@@ -1,0 +1,10 @@
+<p>
+  <strong>Olá, Dener Troquatte</strong>
+</p>
+<p>Ag: 9999, CO: 99999-9</p>
+<p>Poupança: R$ {{getSavings.toFixed(2).replace('.', ',')}}</p>
+<input #withdraw type="number" />
+<button (click)="withdrawCash(withdraw.value)">Sacar</button>
+<p>Carteira: R$ {{getWallet.toFixed(2).replace('.', ',')}}</p>
+<input #deposit type="number" />
+<button (click)="depositCash(deposit.value)">Depositar</button>
