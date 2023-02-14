@@ -1,0 +1,13 @@
+<a routerLink="account" [queryParams]="{ account: 'admin', password: '1234' }">
+  Account
+</a>
+<a [queryParams]="{ account: 'admin', password: '1234' }" routerLink="core">
+  Dashboard
+</a>
+<a
+  [queryParams]="{ account: 'admin', password: '1234' }"
+  routerLink="core/leads"
+>
+  Leads
+</a>
+<h1>Home</h1>
