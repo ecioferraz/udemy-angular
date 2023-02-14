@@ -1,5 +1,5 @@
 {
-  "name": "08-project-1",
+  "name": "15-protecao-de-rotas-guards",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
