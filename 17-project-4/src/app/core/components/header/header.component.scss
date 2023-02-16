@@ -1,0 +1,28 @@
+:host {
+  header {
+    background: var(--header);
+    padding: 0.8rem 2rem;
+    justify-content: space-between;
+
+    &, ul {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      font-size: 1.2rem;
+      font-weight: 700;
+      gap: 1.7rem;
+
+      a {
+        color: #FFF;
+        text-decoration: none;
+      }
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 2rem;
+      }
+    }
+  }
+}
