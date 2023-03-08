@@ -1,0 +1,13 @@
+@import '../../../../../dist/scss/variables.scss';
+
+:host {
+  background: $tertiary-background-color;
+  border-radius: 4px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+  padding: $size-small 0;
+
+  h1 {
+    color: $secondary-text-color;
+    font-size: $size-medium;
+  }
+}
