@@ -1,0 +1,30 @@
+<p *ngIf="destroy; else elseBlock">True</p>
+<ng-template #elseBlock>
+  <p>False</p>
+</ng-template>
+
+<hr />
+
+<p *ngIf="destroyOnClick">True</p>
+<p *ngIf="!destroyOnClick">False</p>
+<button (click)="onClick()">Click</button>
+
+<hr />
+
+<ul>
+  <li *ngFor="let item of list; index as i" (click)="removeFromList(i)">
+    {{i}} - {{item.name}} - {{item.age}}
+  </li>
+</ul>
+<button (click)="addToList({ age: 20, name: 'Item' })">Add to list</button>
+
+<hr />
+
+<input [(ngModel)]="name" />
+<div [ngSwitch]="name">
+  <p *ngSwitchCase="'test'">Test</p>
+  <p *ngSwitchCase="'test2'">Test2</p>
+  <p *ngSwitchDefault>default</p>
+</div>
+
+<hr />
